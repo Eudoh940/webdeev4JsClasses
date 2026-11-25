@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    // Objects are a way to store related data and functionality together. They can represent real-world entities and their properties and behaviors. In JavaScript, objects are created using curly braces {} and can contain key-value pairs.
+    <script>
+        // const person = {
+        //     name: "Emmanuel",
+        //     age: 20,
+        //     height: 5.9,
+        // }
+        // console.log(person.name)
+        // console.log(person.age)
+        // console.log(person.height)
+
+        // person.name = "John";
+        // console.log(person.name)
+
+        // person.sibling = "Jane";
+        // console.log(person.sibling);
+
+        // person.brother = "Mike";
+        // console.log(person.brother);
+
+        // delete person.brother;
+        // console.log(person.brother); // Output: undefined
+
+        // delete person.name;
+        // console.log(person.name); // Output: undefined
+
+
+        // const product ={
+        //     name: "shirt",
+        //     'delivery time': "3-5 days",
+        //     rating:{
+        //         quality: 4.5,
+        //         value: 4.0,
+        //         durability: 4.2
+        //     },
+        //     fun: function function1(){
+        //         console.log('function inside object')
+        //     }
+        // }
+        // console.log(product)
+        // console.log(product.name)
+        // product.fun()
+        // console.log(product['delivery time'])
+        // console.log(product.rating.quality)
+        // console.log(product['name'])
+
+
+        // console.log(typeof console.log)
+
+
+        // console.log('hello '.length)
+        // console.log('hello'.toUpperCase());
+
+
+        const object1 = {
+            message: 'Hello',
+            price: 100,
+        }
+        const object2 = object1;
+        object2.message = 'Goodbye';
+        console.log(object1)
+        console.log(object2)
+
+        const object3 = {
+            message: 'Good job',
+            price: 400,
+        }
+
+        console.log(object1 === object2) // Output: false
+        console.log(object1 === object3) // Output: false
+
+    </script>
+
+</body>
+</html>

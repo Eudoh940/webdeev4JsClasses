@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07- Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <p>Rock Paper Scissors is a simple hand game that is usually played between two people. Each player simultaneously forms one of three shapes with an outstretched hand. The possible shapes are rock, paper, and scissors. The game has three possible outcomes other than a tie: rock crushes scissors, scissors cuts paper, and paper covers rock.</p>
+    <button onclick="playGame('rock')">Rock</button>
+    <button onclick="playGame('paper')">Paper</button>
+    <button onclick="playGame('scissors')">Scissors</button>
+
+    <script>
+        function playGame(playerMove){
+
+            let result = "";
+            const computerMove = pickComputerMove();
+            if (playerMove === 'scissors'){
+                if(computerMove === 'rock'){
+                    result = "You lose! Rock beats Scissors";
+                }else if(computerMove === 'paper'){
+                    result = "You win! Scissors beats Paper";
+                }else if(computerMove === 'scissors'){
+                    result = "It's a tie! Both chose Scissors";
+                }
+                
+            }else if (playerMove === 'paper'){
+                if(computerMove === 'rock'){
+                    result = "You win! Paper beats Rock";
+                }else if(computerMove === 'paper'){
+                    result = "It's a tie! Both chose Paper";    
+                }else if(computerMove === 'scissors'){
+                    result = "You lose! Scissors beats Paper";
+                }
+
+            }else if (playerMove === 'rock'){
+                if(computerMove === 'rock'){
+                    result = "It's a tie! Both chose Rock";
+                }else if(computerMove === 'paper'){
+                    result = "You lose! Paper beats Rock";
+                }else if(computerMove === 'scissors'){
+                    result = "You win! Rock beats Scissors";
+                }
+            }
+            alert(`You picked ${playerMove} and the computer picked ${computerMove}. ${result}`);
+        }
+    
+        
+        function pickComputerMove(){
+            const randomNumber = Math.random();
+
+            let computerMove = "";
+
+            if(randomNumber >= 0 && randomNumber <1/3){
+                computerMove = "rock";
+            }else if(randomNumber >= 1/3 && randomNumber < 2/3){
+                computerMove = "paper";
+            }else{
+                computerMove = "scissors";
+            }
+            return computerMove;
+        }
+    </script>
+</body>
+</html>

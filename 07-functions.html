@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>What is a Function?</h1>
+    <p>A function is a block of code that performs a specific task. It can take inputs, called parameters, and can return an output. Functions help to organize code, make it reusable, and improve readability.</p>
+
+    <script>
+        // Example function
+        function greet(name) {
+            return "Hello, " + name + "!";
+        }
+
+        // Call the function
+        console.log(greet("Alice")); // Output: Hello, Alice!
+
+
+
+
+        // function function1(){
+        //     console.log('My name is Emmanuel from New Horizon Computer Learning Institute');
+        //     console.log('I am a student of Web Development');
+        //     console.log('I am learning JavaScript');
+        //     console.log('I am enjoying the learning process');
+        //     console.log(2 + 2);
+        // }
+
+        // // Call function1
+        // function1();
+
+
+        // function function2(name, age){
+        //     console.log('My name is ' + name);
+        //     console.log('I am ' + age + ' years old');
+        // }
+        // function2("Alice", 25);
+
+
+        function calculateTax(cost,taxPercent = 0.1){
+            console.log(cost * taxPercent);
+        }
+        calculateTax(5000, 0.15); // Output: 750
+        calculateTax(5000); // Output: 500
+        calculateTax(); // Output: NaN
+
+        function sumofTwoNumbers(num1, num2){
+            return num1 + num2;
+        }
+        console.log(sumofTwoNumbers(89, 10)); // Output: 99
+    </script>
+</body>
+</html>
